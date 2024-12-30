@@ -93,10 +93,6 @@ const renderCountryList = () => {
         ${currencyList.join(", ")}
       </p>
       <p>
-        <label>Region</label>
-        ${region}
-      </p>
-      <p>
         <label>Continent</label>
         ${continents.join(", ")}
       </p>
@@ -219,7 +215,10 @@ const onSearchInput = () => {
 
 //* event listeners
 
-document.addEventListener("DOMContentLoaded", loadCountries);
 document.addEventListener("keydown", handleEscapeKey);
 filter.addEventListener("click", onFilterButtonClick);
 searchInput.addEventListener("input", onSearchInput);
+
+//* initialize
+
+loadCountries();
